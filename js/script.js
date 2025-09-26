@@ -56,17 +56,34 @@ document.getElementById('message-form').addEventListener('submit', function(e) {
 
   const name = document.getElementById('name').value.trim();
   const email = document.getElementById('email').value.trim();
+  const subject = document.getElementById('subject').value.trim();
   const message = document.getElementById('message').value.trim();
 
-  // Tampilkan popup dengan data yang diisi
+  // Regex untuk hanya huruf dan spasi
+  const nameRegex = /^[A-Za-z\s]+$/;
+
+  // Validasi
+  if (!name || !email || !message) {
+    alert("⚠️ Semua field wajib diisi!");
+    return;
+  }
+
+  if (!nameRegex.test(name)) {
+    alert("⚠️ Nama hanya boleh huruf dan spasi (tidak boleh angka/simbol).");
+    return;
+  }
+
+  // Jika lolos validasi → tampilkan popup data
   alert(
     `✅ Terima kasih sudah mengisi form!\n\n` +
     `Nama   : ${name}\n` +
     `Email  : ${email}\n` +
+    `Subject  : ${subject}\n` +
     `Pesan  : ${message}`
   );
 
   // Reset form setelah submit
   this.reset();
 });
+
 
