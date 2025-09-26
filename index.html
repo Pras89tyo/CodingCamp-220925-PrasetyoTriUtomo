@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="bg-gray-50">
+    <header>
+      <!-- Navbar -->
+      <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex justify-between h-16">
+            <!-- Logo -->
+            <!-- Logo -->
+            <div class="flex-shrink-0 flex items-center">
+              <img
+                src="assets/img/logo-removebg-preview.png"
+                alt="Logo"
+                class="h-10 w-10 rounded-full object-cover"
+              />
+              <span class="ml-2 text-xl font-semibold text-gray-800"
+                >Prasetyo Tri Utomo</span
+              >
+            </div>
+
+            <!-- Menu desktop -->
+            <div class="hidden md:flex space-x-8 items-center">
+              <a
+                href="#home"
+                class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300"
+                >Home</a
+              >
+              <a
+                href="#profile"
+                class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300"
+                >Profile</a
+              >
+              <a
+                href="#portfolio"
+                class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300"
+                >Portfolio</a
+              >
+              <a
+                href="#message-us"
+                class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300"
+                >Message Us</a
+              >
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="md:hidden flex items-center">
+              <button
+                id="menu-btn"
+                class="text-gray-700 focus:outline-none text-2xl"
+              >
+                <i class="fas fa-bars"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="mobile-menu md:hidden bg-white shadow-lg">
+          <a
+            href="#home"
+            class="block py-3 px-4 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition duration-300"
+            >Home</a
+          >
+          <a
+            href="#profile"
+            class="block py-3 px-4 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition duration-300"
+            >Profile</a
+          >
+          <a
+            href="#portfolio"
+            class="block py-3 px-4 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition duration-300"
+            >Portfolio</a
+          >
+          <a
+            href="#message-us"
+            class="block py-3 px-4 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition duration-300"
+            >Message Us</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <!-- Welcome Popup -->
+    <div
+      id="welcome-popup"
+      class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50"
+    >
+      <div class="bg-white p-6 rounded-lg shadow-lg w-80 text-center">
+        <h3 class="text-xl font-semibold text-gray-800 mb-4">Welcome!</h3>
+        <p class="text-gray-600 mb-4">Please enter your name:</p>
+        <input
+          type="text"
+          id="visitor-name"
+          class="w-full px-4 py-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        />
+        <button
+          id="welcome-submit"
+          class="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition"
+        >
+          Submit
+        </button>
+      </div>
+    </div>
+
+    <main>
+      <!-- Home Section -->
+      <section
+        id="home"
+        class="min-h-screen flex flex-col justify-center items-center gradient-bg text-white pt-16"
+      >
+        <div class="text-center px-4 section-fade-in">
+          <h2
+            id="welcome-text"
+            class="text-2xl md:text-3xl font-medium mb-6"
+          ></h2>
+          <h1 class="text-5xl md:text-6xl font-bold mb-4">
+            Hello, I'm Prasetyo Tri Utomo
+          </h1>
+          <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-center">
+            I'm a fresh graduate and I have passionate web developer
+            specializing in backend developer technologies
+          </p>
+
+          <div class="flex flex-wrap justify-center gap-4">
+            <a
+              href="#portfolio"
+              class="bg-white text-indigo-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300"
+              >View My Work</a
+            >
+            <a
+              href="#message-us"
+              class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-indigo-600 transition duration-300"
+              >Contact Me</a
+            >
+          </div>
+        </div>
+        <div class="mt-16 animate-bounce">
+          <a href="#profile" class="text-white text-2xl">
+            <i class="fas fa-chevron-down"></i>
+          </a>
+        </div>
+      </section>
+
+      <!-- Profile Section -->
+      <section
+        id="profile"
+        class="min-h-screen flex flex-col justify-center items-center py-16 bg-white"
+      >
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12 section-fade-in">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">About Me</h2>
+            <div class="w-20 h-1 bg-indigo-600 mx-auto"></div>
+          </div>
+
+          <div class="flex flex-col md:flex-row items-center gap-8">
+            <div class="md:w-1/3 section-fade-in">
+              <div
+                class="w-64 h-64 mx-auto rounded-full overflow-hidden border-4 border-indigo-100 shadow-lg"
+              >
+                <img
+                  src="assets/img/profil.jpg"
+                  alt="Profile Picture"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            <div class="md:w-2/3 section-fade-in">
+              <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+                Web Developer & UI/UX Enthusiast
+              </h3>
+              <p class="text-gray-600 mb-4">
+                A fresh graduate in Computer Science with a strong interest in
+                software development and problem-solving. Skilled in web
+                development, with hands-on experience from academic projects and
+                internships. Enthusiastic to learn new technologies and
+                contribute to innovative solutions in a professional
+                environment.
+              </p>
+              <p class="text-gray-600 mb-6">
+                Developing proficiency in PHP and Laravel to build dynamic and
+                scalable web applications. Currently learning JavaScript to
+                strengthen my skills in front-end and back-end web development,
+                while also studying UI/UX design to create user-friendly and
+                visually appealing digital products.
+              </p>
+
+              <div class="grid grid-cols-2 gap-4">
+                <div class="flex items-center">
+                  <i class="fas fa-map-marker-alt text-indigo-600 mr-2"></i>
+                  <span class="text-gray-700">Surabaya, Indonesia</span>
+                </div>
+                <div class="flex items-center">
+                  <i class="fas fa-envelope text-indigo-600 mr-2"></i>
+                  <span class="text-gray-700">Tomo420025@gmail.com</span>
+                </div>
+                <div class="flex items-center">
+                  <i class="fas fa-phone text-indigo-600 mr-2"></i>
+                  <span class="text-gray-700">+62 858 5543 4096</span>
+                </div>
+                <div class="flex items-center">
+                  <i class="fas fa-briefcase text-indigo-600 mr-2"></i>
+                  <span class="text-gray-700">Available for Freelance</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio Section -->
+      <section id="portfolio" class="min-h-screen py-16 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12 section-fade-in">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">My Portfolio</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+              Here are some of my recent projects that showcase my skills and
+              expertise in web development.
+            </p>
+            <div class="w-20 h-1 bg-indigo-600 mx-auto mt-4"></div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Portfolio Item 1 -->
+            <div
+              class="portfolio-card bg-white rounded-lg overflow-hidden shadow-md section-fade-in"
+            >
+              <div
+                class="h-48 bg-gradient-to-r from-blue-400 to-purple-500"
+              ></div>
+              <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                  E-Commerce Website
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  A fully responsive e-commerce platform with shopping cart and
+                  payment integration.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded"
+                    >React</span
+                  >
+                  <span
+                    class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded"
+                    >Node.js</span
+                  >
+                  <span
+                    class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded"
+                    >MongoDB</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Portfolio Item 2 -->
+            <div
+              class="portfolio-card bg-white rounded-lg overflow-hidden shadow-md section-fade-in"
+            >
+              <div
+                class="h-48 bg-gradient-to-r from-green-400 to-blue-500"
+              ></div>
+              <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                  Task Management App
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  A productivity application for managing tasks with
+                  drag-and-drop functionality.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded"
+                    >Vue.js</span
+                  >
+                  <span
+                    class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded"
+                    >Firebase</span
+                  >
+                  <span
+                    class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded"
+                    >Tailwind CSS</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Portfolio Item 3 -->
+            <div
+              class="portfolio-card bg-white rounded-lg overflow-hidden shadow-md section-fade-in"
+            >
+              <div
+                class="h-48 bg-gradient-to-r from-yellow-400 to-red-500"
+              ></div>
+              <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                  Travel Blog
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  A visually appealing blog platform for travel enthusiasts with
+                  image galleries.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded"
+                    >WordPress</span
+                  >
+                  <span
+                    class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded"
+                    >PHP</span
+                  >
+                  <span
+                    class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded"
+                    >MySQL</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Message Us Section -->
+      <section id="message-us" class="min-h-screen py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12 section-fade-in">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">Get In Touch</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+              Have a project in mind or want to collaborate? Feel free to reach
+              out to me.
+            </p>
+            <div class="w-20 h-1 bg-indigo-600 mx-auto mt-4"></div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="section-fade-in">
+              <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+                Contact Information
+              </h3>
+              <p class="text-gray-600 mb-6">
+                I'm always open to discussing new opportunities and creative
+                projects.
+              </p>
+
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <i
+                    class="fas fa-map-marker-alt text-indigo-600 mt-1 mr-3"
+                  ></i>
+                  <div>
+                    <h4 class="font-semibold text-gray-800">Address</h4>
+                    <p class="text-gray-600">
+                      Kedungrukem 4, Surabaya, Indonesia
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <i class="fas fa-envelope text-indigo-600 mt-1 mr-3"></i>
+                  <div>
+                    <h4 class="font-semibold text-gray-800">Email</h4>
+                    <p class="text-gray-600">Tomo420025@gmail.com</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <i class="fas fa-phone text-indigo-600 mt-1 mr-3"></i>
+                  <div>
+                    <h4 class="font-semibold text-gray-800">Phone</h4>
+                    <p class="text-gray-600">+62 858 5543 4096</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-8">
+                <h4 class="font-semibold text-gray-800 mb-4">Follow Me</h4>
+                <div class="flex space-x-4">
+                  <a
+                    href="https://www.linkedin.com/in/prasetyo-tri-utomo-b9a619382?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                    class="text-gray-600 hover:text-indigo-600 transition duration-300"
+                  >
+                    <i class="fab fa-linkedin text-2xl"></i>
+                  </a>
+                  <a
+                    href="https://github.com/Pras89tyo"
+                    class="text-gray-600 hover:text-indigo-600 transition duration-300"
+                  >
+                    <i class="fab fa-github text-2xl"></i>
+                  </a>
+                  <a
+                    href="https://www.instagram.com/prasetyotriu_6?igsh=MWFxd3BoMW0zanpiZg=="
+                    class="text-gray-600 hover:text-indigo-600 transition duration-300"
+                  >
+                    <i class="fab fa-instagram text-2xl"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="section-fade-in">
+              <form class="bg-gray-50 p-6 rounded-lg shadow-md" id="message-form">
+                <div class="mb-4">
+                  <label for="name" class="block text-gray-700 mb-2"
+                    >Your Name</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                  />
+                </div>
+
+                <div class="mb-4">
+                  <label for="email" class="block text-gray-700 mb-2"
+                    >Your Email</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                  />
+                </div>
+
+                <div class="mb-4">
+                  <label for="subject" class="block text-gray-700 mb-2"
+                    >Subject</label
+                  >
+                  <input
+                    type="text"
+                    id="subject"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                  />
+                </div>
+
+                <div class="mb-4">
+                  <label for="message" class="block text-gray-700 mb-2"
+                    >Message</label
+                  >
+                  <textarea
+                    id="message"
+                    rows="4"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  class="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-indigo-700 transition duration-300"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p>&copy; 2023 John Doe. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
